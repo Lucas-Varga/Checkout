@@ -22,7 +22,7 @@ public class Program {
             for (int i = 0; i < x; i++) ;
             {
                 System.out.println("PREENCHA AS INFORMACOES: ");
-                System.out.println("Nome do tecnico responsavel: ");
+                System.out.println("\nNome do tecnico responsavel: ");
                 sc.nextLine();
                 String nome = sc.nextLine();
                 System.out.println("Placa do veiculo a ser inspecionado: ");
@@ -33,21 +33,44 @@ public class Program {
             for (Checkin checkin : listCheckin) {
                 System.out.println(listCheckin);
             }
-            List<SistemasIntervidos> listaSistemas = new ArrayList<>();
+            List<String> listaSistemas = new ArrayList<>();
 
             System.out.println("\nConfirme os sistemas que sofreram intervencao no veiculo com S/N: ");
 
             System.out.println("\nMotor: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaSistemas.add("motor");
+            }
             System.out.println("Suspensao: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaSistemas.add("suspensao");
+            }
             System.out.println("Freio: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaSistemas.add("freio");
+            }
             System.out.println("Cambio: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaSistemas.add("cambio");
+            }
             System.out.println("Arrefecimento: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaSistemas.add("arrefecimento");
+            }
             System.out.println("Injecao Eletronica: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaSistemas.add("injecao Eletronica");
+            }
             System.out.println("ABS: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaSistemas.add("ABS");
+            }
             System.out.println("Airbag: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaSistemas.add("airbag");
+            }
 
-            int b = sc.nextInt();
-
+            System.out.println("\nSistemas que sofreram intervencao: " + listaSistemas);
 
 
             sc.close();
