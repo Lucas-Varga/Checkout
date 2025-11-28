@@ -12,7 +12,7 @@ public class Program {
 	public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Deseja iniciar o programa? 1 SIM / 2 SAIR)");
+        System.out.println("Deseja iniciar o programa? 1 SIM / 2 SAIR");
 
         int a = sc.nextInt();
 
@@ -21,7 +21,7 @@ public class Program {
             List<Checkin> listCheckin = new ArrayList<>(1);
             for (int i = 0; i < x; i++) ;
             {
-                System.out.println("PREENCHA AS INFORMACOES: ");
+                System.out.println("\nPREENCHA AS INFORMACOES: ");
                 System.out.println("\nNome do tecnico responsavel: ");
                 sc.nextLine();
                 String nome = sc.nextLine();
@@ -70,7 +70,61 @@ public class Program {
                 listaSistemas.add("airbag");
             }
 
+
+            List<String> listaCheckup = new ArrayList<>();
+
+            System.out.println("\n===CHECK-UP DE VEICULO====");
+
+            System.out.println("\nFaca o check-up nos itens a seguir e marque S para OK e N para sair: ");
+
+            System.out.println("\nNivel do oleo do motor: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaCheckup.add("Nivel do oleo do motor OK");
+            }
+
+            System.out.println("nivel do liquido de arrefecimento: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaCheckup.add("nivel do liquido de arrefecimento OK");
+            }
+
+            System.out.println("nivel do fluido da direcao hidraulica: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaCheckup.add("nivel do fluido da direcao hidraulica OK");
+            }
+
+            System.out.println("nivel do fluido de freio: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaCheckup.add("nivel do fluido de freio OK");
+            }
+
+            System.out.println("check-up no cofre do motor ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaCheckup.add("check-up no cofre do motor OK");
+            }
+
+            System.out.println("aperto das rodas: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaCheckup.add("aperto das rodas OK");
+            }
+
+            System.out.println("aperto do bujao do carter: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaCheckup.add("aperto do bujao do carter OK");
+            }
+
+            System.out.println("aperto do filtro de oleo: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaCheckup.add("aperto do filtro de oleo OK");
+            }
+
+            System.out.println("lampadas: S/N ");
+            if (sc.next().equalsIgnoreCase("S")) {
+                listaCheckup.add("lampadas OK");
+            }
+
+            System.out.println("\n===RESUMO DO CHECK-UP: ===");
             System.out.println("\nSistemas que sofreram intervencao: " + listaSistemas);
+            System.out.println("\nItens verificados no check-up: " + listaCheckup);
 
 
             sc.close();
