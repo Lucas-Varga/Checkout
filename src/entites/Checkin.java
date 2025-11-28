@@ -37,7 +37,7 @@ public class Checkin {
 
     @Override
     public String toString() {
-        return "===DADOS DO CHECK-UP:==="
+        return "\n===DADOS DO CHECK-UP:==="
                 + "\nNome do tecnico responsavel: " + nome
                 + "\nData da inspecao: " + dataDaInspecao
                 + "\nPlaca do veiculo a ser inspecionado: " + placa;
