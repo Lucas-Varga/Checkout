@@ -1,14 +1,13 @@
-package aplication;
+package com.vargatech.checkout.view;
 
 import entites.Checkin;
-import entites.SistemasIntervidos;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Program {
+public class TerminalView {
 	public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -111,7 +110,7 @@ public class Program {
 
                 System.out.println("aperto do bujao do carter: S/N ");
                 if (sc.next().equalsIgnoreCase("S")) {
-                    listaCheckup.add("aperto do bujao do carter OK");
+                        listaCheckup.add("aperto do bujao do carter OK");
                 }
 
                 System.out.println("aperto do filtro de oleo: S/N ");
