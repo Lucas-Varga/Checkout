@@ -123,6 +123,11 @@ public class TerminalView {
                     listaCheckup.add("lampadas OK");
                 }
 
+                System.out.println("lampadas: S/N ");
+                if (sc.next().equalsIgnoreCase("S")) {
+                    listaCheckup.add("lampadas OK");
+                }
+
                 System.out.println("\n===RESUMO DO CHECK-UP: ===");
                 System.out.println("\nSistemas que sofreram intervencao: " + listaSistemas);
                 System.out.println("\nItens verificados no check-up: " + listaCheckup);
