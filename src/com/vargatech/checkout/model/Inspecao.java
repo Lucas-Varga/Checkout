@@ -9,16 +9,51 @@ public class Inspecao {
     private String nome;
     private LocalDateTime dataDaInspecao;
     private String placa;
+    private List<String> sistemasIntervidos;
+    private List<String> itensVerificados;
 
-List<String> sistemas = new ArrayList<>();
+    public Inspecao(String nome, String placa) {
+        // Validação básica (guarda de segurança)
+        if (nome == null || nome.isBlank() || placa == null || placa.isBlank()) {
+            throw new IllegalArgumentException("Nome e Placa são obrigatórios para iniciar uma inspeção.");
+        }
 
+        this.nome = nome;
+        this.placa = placa;
+        this.dataDaInspecao = LocalDateTime.now();
 
-sistemas.add("motor");
-sistemas.add("suspensao");
-sistemas.add("freio");
-sistemas.add("cambio");
-sistemas.add("arrefecimento");
+        this.sistemasIntervidos = new ArrayList<>();
+        this.itensVerificados = new ArrayList<>();
+    }
 
-sout.println(sistemas);
+    public List<String> getSistemasIntervidos() {
+        return sistemasIntervidos;
+    }
 
+    public List<String> getItensVerificados() {
+        return itensVerificados;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public LocalDateTime getDataDaInspecao() {
+        return dataDaInspecao;
+    }
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    @Override
+    public String toString() {
+        return "Inspecao{" +
+                "nome='" + nome + '\'' +
+                ", dataDaInspecao=" + dataDaInspecao +
+                ", placa='" + placa + '\'' +
+                ", sistemasIntervidos=" + sistemasIntervidos +
+                ", itensVerificados=" + itensVerificados +
+                '}';
+    }
 }
