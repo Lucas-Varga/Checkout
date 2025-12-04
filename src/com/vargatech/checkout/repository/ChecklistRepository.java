@@ -9,4 +9,7 @@ public class ChecklistRepository {
     public ChecklistRepository () {
         this.todosOsSistemasDisponiveis = List.of("Motor", "Suspensao", "Freio", "Cambio", "Arrefecimento", "InjecaoEletronica", "ABS", "Airbag" );
     }
+
+
+
 }
