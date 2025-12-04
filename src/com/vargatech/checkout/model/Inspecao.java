@@ -11,6 +11,7 @@ public class Inspecao {
     private String placa;
     private List<String> sistemasIntervidos;
     private List<String> itensVerificados;
+    private double quant;
 
     public Inspecao(String nome, String placa) {
         // Validação básica (guarda de segurança)
