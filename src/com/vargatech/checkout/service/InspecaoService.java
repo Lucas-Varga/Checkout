@@ -4,11 +4,15 @@ import com.vargatech.checkout.repository.ChecklistRepository;
 
 public class InspecaoService {
 
-    private final InspecaoService inspecaoService;
+    private final ChecklistRepository checklistRepository
 
-    public InspecaoService(InspecaoService inspecaoService) {
-        this.inspecaoService = inspecaoService;
+    public InspecaoService(ChecklistRepository checklistRepository) {
+        this.checklistRepository = checklistRepository;
     }
 
+    public void iniciarInspecao(){
 
+
+        System.out.println("Inicada uma nova inspeção");
+    }
 }
