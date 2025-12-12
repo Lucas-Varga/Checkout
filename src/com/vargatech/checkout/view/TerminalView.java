@@ -1,6 +1,7 @@
 package com.vargatech.checkout.view;
 
 import com.vargatech.checkout.model.Inspecao;
+import com.vargatech.checkout.repository.ChecklistRepository;
 
 import java.util.Scanner;
 
@@ -17,6 +18,10 @@ public class TerminalView {
         inspection = new Inspecao(nome, placa);
 
         System.out.println(inspection);
+
+        ChecklistRepository check = new ChecklistRepository();
+        System.out.println(check.getTodosOsSistemasDisponiveis());
+
 
         sc.close();
     }

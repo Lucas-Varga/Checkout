@@ -12,8 +12,9 @@ public class Inspecao {
     private List<String> sistemasIntervidos;
     private List<String> itensVerificados;
 
+
     public Inspecao(String nome, String placa) {
-        // Validação básica (guarda de segurança)
+        // Validação básica
         if (nome == null || nome.isBlank() || placa == null || placa.isBlank()) {
             throw new IllegalArgumentException("Nome e Placa são obrigatórios para iniciar uma inspeção.");
         }
