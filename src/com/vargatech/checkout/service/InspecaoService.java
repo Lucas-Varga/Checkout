@@ -2,17 +2,21 @@ package com.vargatech.checkout.service;
 
 import com.vargatech.checkout.repository.ChecklistRepository;
 
+import java.util.List;
+
 public class InspecaoService {
 
-    private final ChecklistRepository checklistRepository
+    private final ChecklistRepository checklistRepository;
 
     public InspecaoService(ChecklistRepository checklistRepository) {
         this.checklistRepository = checklistRepository;
     }
 
-    public void iniciarInspecao(){
+    public List<String> iniciarInspecao(){
+        System.out.println("Inspecao iniciada");
 
+        List<String> sistemas = checklistRepository.getTodosOsSistemasDisponiveis();
 
-        System.out.println("Inicada uma nova inspeção");
+        return sistemas;
     }
 }
