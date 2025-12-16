@@ -28,8 +28,18 @@ public class TerminalView {
         String[] numerosComoTexto = linhaDigitada.split(",");
         for (String numeroStr : numerosComoTexto){
             try {
-        }
+                int indice = Integer.parseInt(numeroStr.trim()) - 1;
 
+                if (indice >= 0 && indice < sistemasDisponiveis.size()) {
+                    String sistemaEscolhido = sistemasDisponiveis.get(indice);
+                    sistemasEscolhidos.add(sistemaEscolhido);
+                } else {
+                    System.out.println("Atenção: O número " + (indice + 1) + " é uma opção inválida e será ignorado.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Atenção: '" + numeroStr + "' não é um número válido e será ignorado.");
+            }
+        }
         return sistemasEscolhidos;
     }
 }
